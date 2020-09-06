@@ -39,6 +39,13 @@ When using local storage the live migration becomes much slower as it will have 
 
 ## Features
 
+- [ ] KVM machines via libvirt
+- [ ] Volume management (Local & NFS)
+- [ ] cloud-init - Initially provided by configdrive (presenting an ISO with the json blob to the virtual machine)
+- [ ] Support for cloud images using cloud-init
+- [ ] SSH keys management
+- [ ] Bridged network
+- [ ] IPAM - 
 
 ## Future
 - Implement OVS as a networking driver :)
