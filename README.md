@@ -4,8 +4,11 @@
 
 **THIS PROJECT IS A PLAYGROUND FOR MY CRAZY IDEAS :)**
 
+
 ## The Project Scope
 The scope is simple yet complex. First of all it needs to accomplish the basics.
+
+Mikrostack is for the serious homelab nerd. It takes inspiration from the OpenStack projects, and tries to consolidate and simplify the good ideas.
 
 
 ### The Basics
@@ -36,17 +39,40 @@ The storage will be handled by the agent as well. It can utilize local storage o
 When using local storage the live migration becomes much slower as it will have to migrate all the disks of the virtual machine.
 
 
-
 ## Features
-
-- [ ] KVM machines via libvirt
-- [ ] Volume management (Local & NFS)
-- [ ] cloud-init - Initially provided by configdrive (presenting an ISO with the json blob to the virtual machine)
+#### Compute
+- [ ] Instance create / modify / delete (KVM)
+- [ ] Instance snapshot
+- [ ] Instance groups
+- [ ] Instance group snapshot
+- [ ] Cloud-init - Initially provided by configdrive (presenting an ISO with the json blob to the virtual machine)
 - [ ] Support for cloud images using cloud-init
-- [ ] SSH keys management
-- [ ] Bridged network
-- [ ] IPAM - 
+- [ ] SSH keys management (RSA & ed25519)
+- [ ] Live migration / Cold migration
+- [ ] Images - à la Glance :)
+
+#### Storage
+- [ ] Volume create / modify / delete (Local & NFS)
+- [ ] Volume snapshot
+- [ ] Volume groups
+- [ ] Volume group snapshot
+- [ ] Storage migration
+
+#### Network
+- [ ] Bridged network create / modify / delete (Linux Bridge)
+
+
+## Dependencies
+- MAAS (Metal As A Service) - Utilized for full control of the different nodes.
+- JuJu - Used for mikrostack deployment
+
 
 ## Future
-- Implement OVS as a networking driver :)
-- Add support for Ceph storage backend
+**Future OVN / OVS**
+- [ ] IPAM
+- [ ] Builtin DHCP
+- [ ] Builtin L3 Router
+- [ ] cloud-init web provider. Serve the instance with cloud-init data from a central webservice
+
+**Future Ceph**
+- [ ] 
